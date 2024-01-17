@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+    <img id="resim">
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var pathname = window.location.pathname;
@@ -17,7 +18,7 @@
                     })
                     .then(data => {
                         var base64Content = data.content;
-                        window.location.href = `data:image/png;base64,${base64Content}`;
+                        document.getElementById("resim").href = `data:image/png;base64,${base64Content}`;
                     })
                     .catch(error => {
                         console.error("Hata:", error);
