@@ -18,7 +18,7 @@
                     })
                     .then(data => {
                         var base64Content = data.content;
-                        document.getElementById("resim").href = `data:image/png;base64,${base64Content}`;
+                        document.getElementById("resim").src= `data:image/png;base64,${base64Content}`;
                     })
                     .catch(error => {
                         console.error("Hata:", error);
